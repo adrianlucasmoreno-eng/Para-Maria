@@ -1,13 +1,14 @@
 function abrirCarta(){
 
-    document.querySelector(".carta")
-    .classList.add("abierta");
+    document.querySelector(".carta").classList.add("abierta");
 
-    document.querySelector("#web")
-    .classList.remove("oculto");
-document.querySelector(".carta").addEventListener("click", function(){
-    document.getElementById("musica").play();
-});
+    document.querySelector("#web").classList.remove("oculto");
+
+    const musica = document.getElementById("musica");
+
+    musica.play().catch(error => {
+        console.log("El navegador bloqueó la música", error);
+    });
 }
 
 
