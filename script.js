@@ -5,6 +5,9 @@ function abrirCarta(){
 
     document.querySelector("#web")
     .classList.remove("oculto");
+document.querySelector(".carta").addEventListener("click", function(){
+    document.getElementById("musica").play();
+});
 }
 
 
